@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.example.movie.Model.ResultsItem
 import com.example.movie.R
 import com.squareup.picasso.Picasso
@@ -38,7 +39,7 @@ class AdapterMovie :
             Glide.with(itemView.context).load("https://image.tmdb.org/t/p/w500${item?.posterPath}")
                 .centerCrop()
 
-                .placeholder(R.drawable.ic_launcher_foreground)
+                .placeholder(R.drawable.prooses)
                 .into(itemView.image)
 
         }
