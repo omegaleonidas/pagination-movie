@@ -30,13 +30,16 @@ class AdapterMovie :
 
             itemView.title.text = item?.name
             itemView.descripsi.text = item?.description
-            Picasso.get()
-                .load("https://image.tmdb.org/t/p/w500${item?.posterPath}")
-                .into(itemView.image)
-
-
-//            Glide.with(itemView.context).load("https://image.tmdb.org/t/p/w500${item?.posterPath}")
+//                     Picasso.get()
+//                .load("https://image.tmdb.org/t/p/w500${item?.posterPath}")
 //                .into(itemView.image)
+
+
+            Glide.with(itemView.context).load("https://image.tmdb.org/t/p/w500${item?.posterPath}")
+                .centerCrop()
+
+                .placeholder(R.drawable.ic_launcher_foreground)
+                .into(itemView.image)
 
         }
 
