@@ -11,14 +11,24 @@
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:padding="15dp"
-       >
+        android:background="@drawable/ic_launcher_foreground"
+        android:scaleType="fitXY">
 
 
 
 
     </ImageView>
 
-
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:layout_constraintBottom_toBottomOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="@+id/image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/title"
